@@ -1,0 +1,36 @@
+<div class="layout">
+
+  <!-- ✅ SIDEBAR (ONLY FOR DASHBOARD) -->
+  <aside class="sidebar" *ngIf="router.url === '/dashboard'">
+    <h2 class="logo">Admin</h2>
+
+    <ul>
+      <li>🏠 Dashboard</li>
+      <li>👤 Users</li>
+      <li>📊 Analytics</li>
+      <li>📁 Reports</li>
+      <li>⚙️ Settings</li>
+    </ul>
+  </aside>
+
+  <!-- ✅ MAIN SECTION -->
+  <div class="main">
+
+    <!-- ✅ LOGIN / REGISTER NAV -->
+    <nav class="nav" *ngIf="router.url === '/login' || router.url === '/register'">
+      <a routerLink="/login">Login</a>
+      <a routerLink="/register">Register</a>
+    </nav>
+
+    <!-- ✅ DASHBOARD HEADER -->
+    <header class="main-header" *ngIf="router.url === '/dashboard'">
+      <h2>Dashboard</h2>
+      <button (click)="logout()">Logout</button>
+    </header>
+
+    <!-- ✅ PAGE CONTENT -->
+    <router-outlet></router-outlet>
+
+  </div>
+
+</div>

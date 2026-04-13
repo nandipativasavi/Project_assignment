@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f1f6e 0%, #1a3ec8 50%, #2563eb 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+}
+
+/* ── Header / Brand ── */
+.header {
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header img {
+  filter: brightness(0) invert(1);
+  display: block;
+}
+
+/* ── Card ── */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 430px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #eef0f6;
+}
+
+.tab-link {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: #aab0c0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tab-link:hover {
+  color: #1a3ec8;
+}
+
+.tab-link.active {
+  color: #1a3ec8;
+  border-bottom: 2.5px solid #1a3ec8;
+  margin-bottom: -1px;
+}
+
+/* ── Form ── */
+form {
+  padding: 1.8rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Fields ── */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.field-group input,
+.field-group select {
+  padding: 0.72rem 1rem;
+  border: 1.5px solid #e2e8f4;
+  border-radius: 10px;
+  font-size: 0.93rem;
+  font-family: inherit;
+  color: #1e293b;
+  background: #f8faff;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.field-group input::placeholder {
+  color: #c0c8d8;
+}
+
+.field-group input:focus,
+.field-group select:focus {
+  border-color: #1a3ec8;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(26, 62, 200, 0.1);
+}
+
+/* ── Submit Button ── */
+button[type='submit'] {
+  margin-top: 0.4rem;
+  padding: 0.88rem;
+  background: linear-gradient(135deg, #1a3ec8, #2563eb);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 14px rgba(26, 62, 200, 0.35);
+  transition: opacity 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+button[type='submit']:hover {
+  opacity: 0.92;
+  box-shadow: 0 6px 20px rgba(26, 62, 200, 0.45);
+}
+
+button[type='submit']:active {
+  transform: scale(0.98);
+}
+
+/* ── Footer hint ── */
+.login-hint {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 0.2rem;
+}
+
+.login-hint a {
+  color: #1a3ec8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-hint a:hover {
+  text-decoration: underline;
+}

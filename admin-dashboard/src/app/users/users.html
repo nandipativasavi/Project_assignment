@@ -1,0 +1,36 @@
+<div class="users-container">
+
+  <h2>User Management</h2>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th *ngIf="isAdmin">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let user of users">
+
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.status }}</td>
+
+        <td *ngIf="isAdmin">
+          <button (click)="deleteUser(user._id)">Delete</button>
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
